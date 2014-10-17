@@ -16,8 +16,7 @@ Requirements
 
 Configuration
 =============
-1. Modify /etc/profile.d/ec2-api.sh:
-
+- Modify /etc/profile.d/ec2-api.sh:
 ~~~
 export AWS_ELB_HOME=/opt/ec2-api-tools
 export EC2_HOME=/opt/ec2-api-tools
@@ -25,8 +24,7 @@ export PATH=$PATH:$EC2_HOME/bin
 source /etc/java/java.conf
 ~~~
 
-2. Set up JAVA_HOME in /etc/java/java.conf and export all variables:
-
+- Set up JAVA_HOME in /etc/java/java.conf and export all variables:
 ~~~
 export JAVA_LIBDIR=/usr/share/java
 export JNI_LIBDIR=/usr/lib/java
@@ -35,7 +33,7 @@ export JAVA_HOME=$JVM_ROOT/jre
 export JAVACMD_OPTS=
 ~~~
 
-3. Make sure your instance has appropriate IAM role policy set up:
+- Make sure your instance has appropriate IAM role policy set up:
 ~~~ 
 {
   "Statement": [
@@ -56,7 +54,7 @@ export JAVACMD_OPTS=
 }
 ~~~
 
-4. Configure failover in RH Cluster (/etc/cluster/cluster.conf):
+- Configure failover in RH Cluster (/etc/cluster/cluster.conf):
 ~~~
 <?xml version="1.0"?>
 <cluster config_version="1" name="mycluster">
@@ -86,4 +84,4 @@ export JAVACMD_OPTS=
 </cluster>
 ~~~
 
-5. Modify EIP_ALLOC and REGION variables inside the script
+- Modify EIP_ALLOC and REGION variables inside the script
