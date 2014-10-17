@@ -11,7 +11,7 @@ The purpose is to use this script for RedHat Cluster failover facility.
 Requirements
 ============
 
-- openjdk installed
+- openjdk
 - ec2-api-tools
 
 Configuration
