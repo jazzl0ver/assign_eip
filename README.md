@@ -6,7 +6,7 @@ Assign AWS Elastic IP address to the instance.
 This script will take over an Elastic IP (defined by EIP_ALLOC number) to the instance
 this script is running on.
 
-The purpose is to use this script for RedHat Cluster failover facility.
+The purpose is to use this script for RHEL/CentOS Cluster failover facility.
 
 Requirements
 ============
