@@ -85,3 +85,5 @@ export JAVACMD_OPTS=
         </logging>
 </cluster>
 ~~~
+
+5. Modify EIP_ALLOC and REGION variables inside the script
