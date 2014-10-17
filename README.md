@@ -8,6 +8,8 @@ this script is running on.
 
 The purpose is to use this script for RHEL/CentOS Cluster failover facility.
 
+This script is based on vip_monitor.sh (http://media.amazonwebservices.com/articles/vip_monitor_files/vip_monitor.sh) from https://aws.amazon.com/articles/2127188135977316
+
 Requirements
 ============
 
