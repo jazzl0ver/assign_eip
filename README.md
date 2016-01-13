@@ -35,6 +35,12 @@ export JAVA_HOME=$JVM_ROOT/jre
 export JAVACMD_OPTS=
 ~~~
 
+- Create /etc/sysconfig/assign_eip and put EIP_ALLOC and REGION variables into it:
+~~~
+EIP_ALLOC=eipalloc-000000
+REGION=us-east-1
+~~~
+
 - Make sure your instance has appropriate IAM role policy set up:
 ~~~ 
 {
@@ -85,5 +91,3 @@ export JAVACMD_OPTS=
         </logging>
 </cluster>
 ~~~
-
-- Modify EIP_ALLOC and REGION variables inside the script

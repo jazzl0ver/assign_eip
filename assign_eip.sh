@@ -6,10 +6,13 @@
 #
 
 # Elastic IP ID
-EIP_ALLOC=eipalloc-012345
+#EIP_ALLOC=eipalloc-42835827
 
 # Specify the EC2 region that this will be running in
-REGION=us-east-1
+#REGION=us-east-1
+
+# Grab EIP_ALLOC and REGION from env vars
+. /etc/sysconfig/assign_eip
 
 # Run aws-apitools-common.sh to set up default environment variables and to
 # leverage AWS security credentials provided by EC2 roles
@@ -62,7 +65,7 @@ stop () {
 }
 
 status() {
-	EIP=`/opt/ec2-api-tools/bin/ec2-describe-addresses eipalloc-42835827 | grep ADDRESS | awk '{print $2}'`
+	EIP=`/opt/ec2-api-tools/bin/ec2-describe-addresses $EIP_ALLOC | grep ADDRESS | awk '{print $2}'`
 	MAC=`/usr/bin/curl --silent http://169.254.169.254/latest/meta-data/mac`
 	/usr/bin/curl --silent http://169.254.169.254/latest/meta-data/network/interfaces/macs/$MAC/public-ipv4s | grep -q $EIP
 	ISASSIGNED=$?
